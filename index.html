@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Violência no Trabalho</title>
+  <meta name="description" content="Apresentação de Sociologia: onde está a violência? No mundo do trabalho.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="papel">
+
+  <div class="viewport" id="viewport">
+    <main class="stage" id="stage" tabindex="-1" aria-live="polite">
+
+      <div class="slides" id="slides"></div>
+
+      <!-- barra de progresso, número e botões (aparecem ao mexer o mouse) -->
+      <div class="hud" id="hud">
+        <div class="hud__nav">
+          <button class="hud__btn" id="btn-prev" type="button" aria-label="Slide anterior">‹ Voltar</button>
+          <button class="hud__btn" id="btn-next" type="button" aria-label="Próximo slide">Avançar ›</button>
+          <button class="hud__btn" id="btn-notes" type="button">Notas (N)</button>
+          <button class="hud__btn" id="btn-ov" type="button">Visão geral (O)</button>
+          <button class="hud__btn" id="btn-fs" type="button">Tela cheia (F)</button>
+        </div>
+        <p class="hud__hint">H mostra os atalhos · N notas · O visão geral · F tela cheia</p>
+        <div class="hud__count"><span id="hud-count">01</span><small>/ <span id="hud-total">00</span></small></div>
+        <div class="hud__progress"><span class="hud__fill" id="hud-fill"></span></div>
+      </div>
+
+      <!-- notas do apresentador (tecla N) -->
+      <aside class="notes" id="notes" aria-label="Notas do apresentador">
+        <div class="notes__main">
+          <div class="notes__head"><span>Notas do apresentador</span><span id="notes-pos"></span><span id="notes-sec"></span></div>
+          <div class="notes__text" id="notes-text"></div>
+        </div>
+        <div class="notes__side">
+          <b>Próximo</b>
+          <div class="notes__next" id="notes-next"></div>
+          N fecha as notas.<br>P abre as notas numa janela separada (para usar com o projetor em tela estendida).
+        </div>
+      </aside>
+
+      <!-- visão geral (tecla O) -->
+      <section class="overview" id="overview" aria-label="Visão geral dos slides">
+        <div class="ov__head"><h2 class="ov__title">Visão geral</h2><span class="ov__hint">Clique num slide ou use as setas + Enter · O ou Esc fecha</span></div>
+        <div class="ov__grid" id="ov-grid"></div>
+      </section>
+
+      <!-- ajuda (tecla H) -->
+      <section class="help" id="help" aria-label="Atalhos de teclado">
+        <h3>Atalhos</h3>
+        <dl>
+          <dt><kbd>→</kbd><kbd>Espaço</kbd></dt><dd>Próximo slide (também clique ou deslize)</dd>
+          <dt><kbd>←</kbd></dt><dd>Slide anterior</dd>
+          <dt><kbd>F</kbd></dt><dd>Tela cheia</dd>
+          <dt><kbd>N</kbd></dt><dd>Notas do apresentador</dd>
+          <dt><kbd>P</kbd></dt><dd>Notas numa janela separada, com cronômetro</dd>
+          <dt><kbd>O</kbd></dt><dd>Visão geral com miniaturas</dd>
+          <dt><kbd>B</kbd></dt><dd>Tela preta (pausa para conversar)</dd>
+          <dt><kbd>5</kbd><kbd>Enter</kbd></dt><dd>Pular direto para o slide 5</dd>
+          <dt><kbd>Home</kbd><kbd>End</kbd></dt><dd>Primeiro / último slide</dd>
+        </dl>
+        <p>Dica: index.html#7 abre direto no slide 7. H ou Esc fecha esta caixa.</p>
+      </section>
+
+      <div class="blackout" id="blackout"></div>
+      <div class="toast" id="toast" role="status"></div>
+    </main>
+  </div>
+
+  <div class="mottle" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="rotate" role="note">
+    <span>Gire o celular: a apresentação foi feita para tela deitada.</span>
+    <button type="button" id="rotate-ok">OK</button>
+  </div>
+
+  <noscript>Ative o JavaScript para ver a apresentação.</noscript>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/slides.js"></script>
+  <script src="js/layouts.js"></script>
+  <script src="js/deck.js"></script>
+</body>
+</html>
