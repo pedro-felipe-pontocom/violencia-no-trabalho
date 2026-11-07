@@ -18,8 +18,8 @@ window.TRABALHO = {
   rotuloProfessor: 'Professora',
   professor: 'Neusa',
   turma: '3002',
-  escola: '[ESCOLA]',   // deixe '' para esconder
-  data: '[DATA]',       // deixe '' para esconder
+  escola: 'E. E. Bolivar Tinoco Mineiro',   // deixe '' para esconder
+  data: '06/11/2026',                       // deixe '' para esconder
 };
 
 window.SLIDES = [
